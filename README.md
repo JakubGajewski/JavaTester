@@ -1,7 +1,13 @@
 # JavaTester
-Program tworzony w celu egzaminowania wiedzy teoretycznej z Javy.
-Zawiera zbiór pytań i odpowiedzi.
-Opracowanie: Jakub Gajewski oraz Michał Trzop
+Funkcjonalność programu to egzaminowanie wiedzy teoretycznej z Javy.
+Program łączy się z bazą danych zawierającą zbiór pytań i odpowiedzi.
+
+Program wykonany przede wzsystkim w celach ćwiczebnych: doskonalenie
+ frameworka Spring, wzorca MVC, a także połączenia z bazą danych.
+ 
+ Wykonanie w metodyce pair-programming przez: 
+ Michał Trzop
+ Jakub Gajewski
 
 do zrobienia:
 1. panel logowania
