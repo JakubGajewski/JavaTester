@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import pl.javatester.JavaTester.models.QuestionModel;
 import pl.javatester.JavaTester.models.repositories.QuestionReopository;
+import pl.javatester.JavaTester.models.repositories.UserRepository;
 
 import java.util.Optional;
 
@@ -14,6 +15,7 @@ public class MainController {
 
     @Autowired
     QuestionReopository questionReopository;
+    UserRepository userRepository;
 
     @GetMapping("/")
     @ResponseBody
