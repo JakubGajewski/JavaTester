@@ -18,7 +18,7 @@ public class MainController {
     @GetMapping("/")
     @ResponseBody
     public String costam() {
-        Optional<QuestionModel> questionModel = questionReopository.findById(1);
+        Optional<QuestionModel> questionModel = questionReopository.findById(7);
         return questionModel.toString();
     }
 
