@@ -10,12 +10,11 @@
     Twoje pytanie:
     <p th:text="${questionModel.getContent()}"></p><br>
     <form th:action="@{/question}" method="post" th:object="${answerForm}">
-        <input type="radio" name="answer" value="answer1" th:text="${questionModel.getAnswer1()}"><br>
-        <input type="radio" name="answer" value="answer2" th:text="${questionModel.getAnswer2()}"><br>
-        <input type="radio" name="answer" value="answer3" th:text="${questionModel.getAnswer3()}"><br>
-        <input type="radio" name="answer" value="answer4" th:text="${questionModel.getAnswer4()}"><br>
+        <input type="radio" th:text="${questionModel.getAnswer1()}" th:field="*{chosenAnswer}" th:value="1"><br>
+        <input type="radio" th:text="${questionModel.getAnswer2()}" th:field="*{chosenAnswer}" th:value="2"><br>
+        <input type="radio" th:text="${questionModel.getAnswer3()}" th:field="*{chosenAnswer}" th:value="3"><br>
+        <input type="radio" th:text="${questionModel.getAnswer4()}" th:field="*{chosenAnswer}" th:value="4"><br>
         <button type="submit">Wyślij odpowiedź</button>
-        <textarea type="text" maxlength="1" rows="1" cols="1" th:field="*{cyfra}" placeholder="Treść"></textarea>
     </form>
 </div>
 

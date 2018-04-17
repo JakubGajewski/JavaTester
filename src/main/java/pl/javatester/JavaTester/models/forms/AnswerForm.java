@@ -7,5 +7,4 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class AnswerForm {
     private int chosenAnswer;
-    private String cyfra;
 }

@@ -23,9 +23,7 @@ do zrobienia:
     
     
 
-3.
-
-Dodatkowo - na przyszłość:
+3. Dodatkowo - na przyszłość:
     - losowanie kolejności wyświetlania
     - losowanie kolejności pytań
     - dla admina: możliwość dodawania/edytowania/kasowania pytań i kategorii
@@ -34,5 +32,7 @@ Dodatkowo - na przyszłość:
     zadawanie tylko pytań, na które nie było jeszcze poprawnej odpowiedzi
     - kategoryzacja pytań
     - poziom trudności
+    - testy napisać
+    - hasło zaszyfrować
 
 

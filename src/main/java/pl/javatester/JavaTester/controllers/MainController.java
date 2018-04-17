@@ -43,7 +43,8 @@ public class MainController {
     @PostMapping("/question")
     @ResponseBody
     public String answerQuestionTOZUPELNIENIEMAZNACZENIANIGDZIE(@ModelAttribute("answerForm") AnswerForm babababa){
-        if(questionReopository.findById(1).getCorrect() == Integer.valueOf(babababa.getCyfra())) {
+        System.out.println(babababa.getChosenAnswer());
+        if(questionReopository.findById(1).getCorrect() == babababa.getChosenAnswer()) {
             return "DOBRZE";
         }
         else {
