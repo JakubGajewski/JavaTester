@@ -26,7 +26,7 @@ public class MainController {
         return "index";
     }
 
-    @GetMapping("/question/")
+    @GetMapping("/question")
     public String displayQuestion(Model model) {
         model.addAttribute("questionModel", questionReopository.findById(1));
         //Optional<QuestionModel> questionModel = questionReopository.findById(1);
