@@ -19,6 +19,8 @@ public class MainController {
     QuestionReopository questionReopository;
     UserRepository userRepository;
 
+    int dupa = 1;
+
 
     //TODO
     @GetMapping("/index")
