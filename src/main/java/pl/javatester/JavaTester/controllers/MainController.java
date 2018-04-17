@@ -2,6 +2,7 @@ package pl.javatester.JavaTester.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import pl.javatester.JavaTester.models.QuestionModel;
@@ -10,6 +11,7 @@ import pl.javatester.JavaTester.models.repositories.UserRepository;
 
 import java.util.Optional;
 
+
 @Controller
 public class MainController {
 
@@ -17,17 +19,28 @@ public class MainController {
     QuestionReopository questionReopository;
     UserRepository userRepository;
 
+    //TODO
+    @GetMapping("/index")
+    public String displayIndex() {
+        return "index";
+    }
+
     @GetMapping("/question")
-    //@ResponseBody
-    public String displayQuestion() {
-        Optional<QuestionModel> questionModel = questionReopository.findById(1);
-
-
-
-
-
-
+    public String displayQuestion(Model model) {
+        model.addAttribute("question", questionReopository.findById(1));
+        //Optional<QuestionModel> questionModel = questionReopository.findById(1);
         return "question";
     }
 
+
+
 }
+
+
+/*
+
+    @GetMapping("/")
+    public String index(Model model){
+        model.addAttribute("posts", postRepository.findAllByOrderByIdDesc());
+        return "dashboard";
+    }*/
