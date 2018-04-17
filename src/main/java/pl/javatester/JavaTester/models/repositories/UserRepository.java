@@ -1,6 +1,9 @@
 package pl.javatester.JavaTester.models.repositories;
 
-//TODO: Michał
-//(jeszcze w PHP MY ADMIN ZROBIC TABELE)
-public interface UserRepository {
+import org.springframework.data.repository.CrudRepository;
+import pl.javatester.JavaTester.models.QuestionModel;
+import pl.javatester.JavaTester.models.UserModel;
+
+public interface UserRepository extends CrudRepository<UserModel, Integer> {
+    UserModel findById(int id);
 }

@@ -1,0 +1,29 @@
+package pl.javatester.JavaTester.models.services;
+
+import lombok.Getter;
+import lombok.Setter;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import pl.javatester.JavaTester.models.UserModel;
+import pl.javatester.JavaTester.models.repositories.UserRepository;
+
+import java.util.Arrays;
+import java.util.List;
+
+@Service
+public class UserService {
+
+    final
+    UserRepository userRepository;
+
+    @Autowired
+    public UserService(UserRepository userRepository) {
+        this.userRepository = userRepository;
+    }
+
+    @Getter @Setter
+    private UserModel user;
+
+    //List<String> answeredAnswers = Arrays.asList(userRepository.findById(user.getId()).getAnswered().split("_"));
+
+}

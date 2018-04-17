@@ -19,6 +19,7 @@ public class MainController {
     QuestionReopository questionReopository;
     UserRepository userRepository;
 
+
     //TODO
     @GetMapping("/index")
     public String displayIndex() {
@@ -27,6 +28,11 @@ public class MainController {
 
     @GetMapping("/question")
     public String displayQuestion(Model model) {
+        int questionId = (int)Math.random()*5;
+        while (userRepository.findById(user.getId()) == questionId)
+        {
+
+        }
         model.addAttribute ("answerForm", new AnswerForm());
         model.addAttribute("questionModel", questionReopository.findById(1));
         //Optional<QuestionModel> questionModel = questionReopository.findById(1);
