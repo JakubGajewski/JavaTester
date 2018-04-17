@@ -35,10 +35,4 @@ public class MainController {
 }
 
 
-/*
 
-    @GetMapping("/")
-    public String index(Model model){
-        model.addAttribute("posts", postRepository.findAllByOrderByIdDesc());
-        return "dashboard";
-    }*/
