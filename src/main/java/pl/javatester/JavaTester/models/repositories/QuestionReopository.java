@@ -9,4 +9,3 @@ import java.util.List;
 @Repository
 public interface QuestionReopository extends CrudRepository<QuestionModel, Integer> {
 }
-
