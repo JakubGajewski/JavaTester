@@ -8,7 +8,14 @@
 <h1 style="text-align: center">Test your java knowledge!</h1>
 <div style="text-align: center">
     Twoje pytanie:
-    <p th:text="${questionModel.getContent()}"></p>
+    <p th:text="${questionModel.getContent()}"></p><br>
+    <form action="">
+        <input type="radio" name="answer" value="answer1" th:text="${questionModel.getAnswer1()}"><br>
+        <input type="radio" name="answer" value="answer2" th:text="${questionModel.getAnswer2()}"><br>
+        <input type="radio" name="answer" value="answer3" th:text="${questionModel.getAnswer3()}"><br>
+        <input type="radio" name="answer" value="answer4" th:text="${questionModel.getAnswer4()}"><br>
+    </form>
+
 </div>
 
 </body>
