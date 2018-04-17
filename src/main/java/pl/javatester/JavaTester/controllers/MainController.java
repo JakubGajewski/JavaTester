@@ -17,11 +17,17 @@ public class MainController {
     QuestionReopository questionReopository;
     UserRepository userRepository;
 
-    @GetMapping("/")
-    @ResponseBody
-    public String costam() {
-        Optional<QuestionModel> questionModel = questionReopository.findById(7);
-        return questionModel.toString();
+    @GetMapping("/question")
+    //@ResponseBody
+    public String displayQuestion() {
+        Optional<QuestionModel> questionModel = questionReopository.findById(1);
+
+
+
+
+
+
+        return "question";
     }
 
 }

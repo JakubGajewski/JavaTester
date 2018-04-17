@@ -20,12 +20,3 @@ public class QuestionModel {
     private String answer4;
     private int correct;
 }
-
-
-
-
-
-
-
-
-
