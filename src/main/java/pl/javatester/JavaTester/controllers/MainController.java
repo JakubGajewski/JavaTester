@@ -5,6 +5,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import pl.javatester.JavaTester.models.QuestionModel;
 import pl.javatester.JavaTester.models.repositories.QuestionReopository;
@@ -28,6 +29,13 @@ public class MainController {
 
     @GetMapping("/question")
     public String displayQuestion(Model model) {
+        model.addAttribute("questionModel", questionReopository.findById(1));
+        //Optional<QuestionModel> questionModel = questionReopository.findById(1);
+        return "question";
+    }
+
+    @PostMapping("/question")
+    public String answerQuestion(Model model) {
         model.addAttribute("questionModel", questionReopository.findById(1));
         //Optional<QuestionModel> questionModel = questionReopository.findById(1);
         return "question";
