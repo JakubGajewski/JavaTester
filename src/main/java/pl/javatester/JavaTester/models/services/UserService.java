@@ -16,13 +16,15 @@ public class UserService {
     final
     UserRepository userRepository;
 
+    @Getter @Setter
+    private UserModel user;
+
     @Autowired
     public UserService(UserRepository userRepository) {
         this.userRepository = userRepository;
     }
 
-    @Getter @Setter
-    private UserModel user;
+
 
     //List<String> answeredAnswers = Arrays.asList(userRepository.findById(user.getId()).getAnswered().split("_"));
 

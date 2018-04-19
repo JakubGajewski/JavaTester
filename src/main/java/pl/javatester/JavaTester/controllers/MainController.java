@@ -8,7 +8,11 @@ import pl.javatester.JavaTester.models.QuestionModel;
 import pl.javatester.JavaTester.models.forms.AnswerForm;
 import pl.javatester.JavaTester.models.repositories.QuestionReopository;
 import pl.javatester.JavaTester.models.repositories.UserRepository;
+import pl.javatester.JavaTester.models.services.UserService;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import java.util.Optional;
 
 
@@ -18,9 +22,7 @@ public class MainController {
     @Autowired
     QuestionReopository questionReopository;
     UserRepository userRepository;
-
-    int dupa = 1;
-
+    UserService userService;
 
     //TODO
     @GetMapping("/index")
@@ -31,12 +33,18 @@ public class MainController {
     @GetMapping("/question")
     public String displayQuestion(Model model) {
         int questionId = (int)Math.random()*5;
-        while (userRepository.findById(user.getId()) == questionId)
-        {
-
+        List answeredQuestions = new ArrayList<>();
+        if (answeredQuestions.size() == 5) {
+            return "out_of_question";
         }
-        model.addAttribute ("answerForm", new AnswerForm());
-        model.addAttribute("questionModel", questionReopository.findById(1));
+        answeredQuestions = Arrays.asList(userService.getUser().getAnswered().split("."));
+        while (answeredQuestions.contains(questionId+""))
+        {
+            questionId = (int)Math.random()*5;
+        }
+        model.addAttribute("questionModel", questionReopository.findById(questionId));
+        //model.addAttribute ("answerForm", new AnswerForm());
+        //model.addAttribute("questionModel", questionReopository.findById(1));
         //Optional<QuestionModel> questionModel = questionReopository.findById(1);
         return "question";
     }
