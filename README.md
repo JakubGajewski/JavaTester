@@ -9,21 +9,20 @@ Program wykonany przede wzsystkim w celach ćwiczebnych: doskonalenie
  Michał Trzop
  Jakub Gajewski
 
-do zrobienia:
-1. panel logowania
+Program w stadium początkowym - pozostaje do zrobienia:
+
+1. Panel logowania
     - repozytorium użytkowników
     - moderator/regular user
 
-2. templatki musimy zrobić
+2. Front-end
     - strona główna
     - logowanie / rejestracja + informacje o logowaniu
     - templatka z pytaniem z javy oraz możliwością zaznaczenia odpowiedzi,
     przechodzenia do następnego pytania, zapisywania odpowiedzi i wyniku;
-    wyświetlanie informacji w panelu górnym (o użytkowniku, wynikach, itp)
-    
-    
+    wyświetlanie informacji w panelu górnym (o użytkowniku, wynikach, itp
 
-3. Dodatkowo - na przyszłość:
+3. Rozszerzenie
     - losowanie kolejności wyświetlania
     - losowanie kolejności pytań
     - dla admina: możliwość dodawania/edytowania/kasowania pytań i kategorii
