@@ -7,9 +7,6 @@ import org.springframework.stereotype.Service;
 import pl.javatester.JavaTester.models.UserModel;
 import pl.javatester.JavaTester.models.repositories.UserRepository;
 
-import java.util.Arrays;
-import java.util.List;
-
 @Service
 public class UserService {
 

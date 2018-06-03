@@ -4,16 +4,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-import pl.javatester.JavaTester.models.QuestionModel;
-import pl.javatester.JavaTester.models.forms.AnswerForm;
 import pl.javatester.JavaTester.models.repositories.QuestionReopository;
 import pl.javatester.JavaTester.models.repositories.UserRepository;
 import pl.javatester.JavaTester.models.services.UserService;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.Optional;
+
 
 
 @Controller
@@ -56,11 +53,11 @@ public class MainController {
 //        return "question";
 //    }
 
+    //todo: zmienić ustawione na sztywno pytanie na takie, jakie w rzeczywistości padło
     @PostMapping("/question")
-    @ResponseBody
-    public String answerQuestionTOZUPELNIENIEMAZNACZENIANIGDZIE(@ModelAttribute("answerForm") AnswerForm babababa){
-        System.out.println(babababa.getChosenAnswer());
-        if(questionReopository.findById(1).getCorrect() == babababa.getChosenAnswer()) {
+    public String answerQuestionXXX(@RequestParam ("chosenAnswer") int chosenAnswer) {
+        System.out.println(chosenAnswer);
+        if(questionReopository.findById(1).getCorrect() == chosenAnswer) {
             return "DOBRZE";
         }
         else {

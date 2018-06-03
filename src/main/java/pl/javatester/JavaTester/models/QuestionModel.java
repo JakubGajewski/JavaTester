@@ -2,8 +2,6 @@ package pl.javatester.JavaTester.models;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import pl.javatester.JavaTester.models.forms.AnswerForm;
-
 import javax.persistence.*;
 
 @Entity
@@ -20,5 +18,4 @@ public class QuestionModel {
     private String answer3;
     private String answer4;
     private int correct;
-
 }

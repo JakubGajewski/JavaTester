@@ -9,11 +9,11 @@
 <div style="text-align: center">
     Twoje pytanie:
     <p th:text="${questionModel.getContent()}"></p><br>
-    <form th:action="@{/question}" method="post" th:object="${answerForm}">
-        <input type="radio" th:text="${questionModel.getAnswer1()}" th:field="*{chosenAnswer}" th:value="1"><br>
-        <input type="radio" th:text="${questionModel.getAnswer2()}" th:field="*{chosenAnswer}" th:value="2"><br>
-        <input type="radio" th:text="${questionModel.getAnswer3()}" th:field="*{chosenAnswer}" th:value="3"><br>
-        <input type="radio" th:text="${questionModel.getAnswer4()}" th:field="*{chosenAnswer}" th:value="4"><br>
+    <form th:action="@{/question}" method="post">
+        <input type="radio" th:text="${questionModel.getAnswer1()}" th:name="chosenAnswer" th:value="1"><br>
+        <input type="radio" th:text="${questionModel.getAnswer2()}" th:name="chosenAnswer" th:value="2"><br>
+        <input type="radio" th:text="${questionModel.getAnswer3()}" th:name="chosenAnswer" th:value="3"><br>
+        <input type="radio" th:text="${questionModel.getAnswer4()}" th:name="chosenAnswer" th:value="4"><br>
         <button type="submit">Wyślij odpowiedź</button>
     </form>
 </div>
